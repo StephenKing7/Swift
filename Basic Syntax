@@ -1,0 +1,129 @@
+Statements don't require semicolons, but you may use them
+
+No main method/main function
+
+Playgrounds are self contained single projects.  Playgrounds continuously execute your code 
+
+Swift does type inference.  All variables in Swift are of a specific type.. you cannot change the type of a variable.. or you can be explicit
+
+var/let myVariable:  Int
+                 Float
+                 Double
+                 Bool
+                 String
+                 Character
+                 
+
+In Swift, the use of constants is encouraged.  Use "let" wherever possible.
+
+create with var - it's variable / mutable
+create with let - it's constant / immutable
+
+If Statements in Swift:
+You do not need parentheses
+Curly braces required around each code block
+Conditions must be true or false
+
+if a > 50 {
+if b < 0 {
+if c == 0 { // equality
+if d != 99 {  // inequality
+
+if a > 50 && b < 100 {
+if isActive || isManager {
+
+if myVar > 5000 {
+  // do something
+} else if {
+ // do something else
+ } else {
+ // something else
+ }
+ 
+ Switch Summary:
+ Switch statements must be exhaustive!
+ Can Provide ranges of values
+ No implicit fallthrough - code required in all cases
+ 
+ let windSpeed = 5
+ switch windSpeed {
+ case 0:
+  // in the case it's 0, do this
+ case 1:
+  // in the case it's 1, do this
+ default:
+  // in case no other values were true... could use "break"
+  }
+
+Using Ranges with Switch
+let windSpeed = 5
+switch windSpeed {
+case 0...3:
+  println("It's very calm.")
+case 4...6:
+  println("A little windy.")
+default:
+  break
+}
+
+For-in, While, Do While
+
+for each-item in some-collection {
+  // use each-item
+}
+
+for index in 1...100 {
+  total = total + index
+}
+
+println("The total is \(total)")
+
+... closed range operator       0...someVariable
+..<  half-open range operator   0..<someArray.count
+
+
+var name = "Bob"
+
+for eachChar in name {
+  println(eachChar)
+  }
+  
+Creating While Loops in Swift
+
+while condition {
+  // ...
+  }
+  
+do {
+  // ...
+}  while condition
+
+func myFunction() {
+  println("This is a simple function")
+  }
+// to call  
+myFunction()
+
+func myFunction(name : String) {
+  println("Hello, \(name)")
+
+myFunction(Jane)
+
+**Be default, parameters are constants
+
+func myFunction() -> String {
+  return "Hello"
+}
+
+let result = myFunction()
+println(myFunction())
+
+func myFunction (name : String = "John Doe") {
+  println("Hello, \(name)")
+  }
+  
+  // to call
+  myFunction()
+  myFUnction("Jane") // ERROR - this will no longer work
+  
+  myFunction(name:"Jane") // OK - provide named argument
